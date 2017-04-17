@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HistogramView">
+        <attr name="histogramItemWidth" format="dimension"/><!-- 柱状图项宽度 -->
+        <attr name="topTextColor" format="color"/><!-- 顶部文字颜色 -->
+        <attr name="topTextSize" format="dimension"/><!-- 顶部文字大小 -->
+        <attr name="axesColor" format="color"/><!-- 坐标轴颜色 -->
+        <attr name="axesTextColor" format="color"/><!-- 坐标轴文字颜色 -->
+        <attr name="axesTextSize" format="dimension"/><!-- 坐标轴文字颜色 -->
+    </declare-styleable>
+</resources>

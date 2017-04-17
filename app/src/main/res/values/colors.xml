@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--按照设计规范定义的颜色 start-->
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+
+    <color name="mainColor">#4b89dc</color><!--主色-->
+    <color name="accentColor">#ff4800</color><!--强调色-->
+    <color name="backgroundColor">#f8f8f8</color><!--背景色-->
+    <!--其它辅色-->
+    <color name="subColor">#fc7845</color><!--主要的辅色-->
+    <color name="subColor1">#85B7F9</color>
+    <color name="subColor2">#AEC5E6</color>
+    <color name="subColor3">#FF5757</color>
+    <color name="subColor4">#BDE0BC</color>
+    <color name="subColor5">#FDCCCC</color>
+</resources>
