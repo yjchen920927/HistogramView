@@ -22,8 +22,8 @@ import java.util.List;
  * 自定义柱状图
  */
 public class HistogramView extends View {
-    private Paint mAexsPaint;// 坐标轴 轴线 画笔：
-    private Paint mAexsTextPaint;// 绘制坐标轴文本的画笔
+    private Paint mAxesPaint;// 坐标轴 轴线 画笔：
+    private Paint mAxesTextPaint;// 绘制坐标轴文本的画笔
     private Paint mTopTextPaint;// 绘制坐标轴文本的画笔
     private Paint mHistogramPaint;// 矩形画笔 柱状图的样式信息
 
@@ -83,16 +83,16 @@ public class HistogramView extends View {
         mMargin = dp2px(20);
 
         //初始化坐标轴画笔
-        mAexsPaint = new Paint();
-        mAexsPaint.setColor(axesColor);
-        mAexsPaint.setAntiAlias(true);
+        mAxesPaint = new Paint();
+        mAxesPaint.setColor(axesColor);
+        mAxesPaint.setAntiAlias(true);
         //坐标轴文字画笔
-        mAexsTextPaint = new TextPaint();
-        mAexsTextPaint.setStyle(Paint.Style.FILL);
-        mAexsTextPaint.setColor(axesTextColor);
-        mAexsTextPaint.setTextSize(axesTextSize);
-        mAexsTextPaint.setAntiAlias(true);
-        mAexsTextPaint.setTextAlign(Paint.Align.LEFT);
+        mAxesTextPaint = new TextPaint();
+        mAxesTextPaint.setStyle(Paint.Style.FILL);
+        mAxesTextPaint.setColor(axesTextColor);
+        mAxesTextPaint.setTextSize(axesTextSize);
+        mAxesTextPaint.setAntiAlias(true);
+        mAxesTextPaint.setTextAlign(Paint.Align.LEFT);
         //顶部文字画笔
         mTopTextPaint = new TextPaint();
         mTopTextPaint.setStyle(Paint.Style.FILL);
@@ -186,7 +186,7 @@ public class HistogramView extends View {
     private void drawAxesText(Canvas canvas) {
         for (int i = 0; i < columCount; i++) {
             // 设置底部的文字
-            float textWidth = mAexsTextPaint.measureText(nameLists.get(i));
+            float textWidth = mAxesTextPaint.measureText(nameLists.get(i));
             if (textWidth > columWidth) {
                 textWidth = columWidth / 2;
             } else {
@@ -209,12 +209,12 @@ public class HistogramView extends View {
 
     private void drawAxesLineAndAxes(Canvas canvas) {
         // 绘制底部的线条
-        canvas.drawLine(0, mHeight - bottomAxesTextHeight, mWidth, mHeight - bottomAxesTextHeight, mAexsPaint);
+        canvas.drawLine(0, mHeight - bottomAxesTextHeight, mWidth, mHeight - bottomAxesTextHeight, mAxesPaint);
         // 绘制底部的线条
-        canvas.drawLine(mMargin, mMarginTop, mMargin, mHeight - bottomAxesTextHeight + mMargin, mAexsPaint);
+        canvas.drawLine(mMargin, mMarginTop, mMargin, mHeight - bottomAxesTextHeight + mMargin, mAxesPaint);
 
-        canvas.drawText("0", mMargin / 2, mHeight - bottomAxesTextHeight, mAexsTextPaint);
-        canvas.drawText(maxValue + "", mMargin / 2, mHeight - bottomAxesTextHeight - histogramHeight, mAexsTextPaint);
+        canvas.drawText("0", mMargin / 2, mHeight - bottomAxesTextHeight, mAxesTextPaint);
+        canvas.drawText(maxValue + "", mMargin / 2, mHeight - bottomAxesTextHeight - histogramHeight, mAxesTextPaint);
     }
 
     private int dp2px(int value) {
